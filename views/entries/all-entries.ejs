@@ -15,7 +15,7 @@
             <h2><%= entry.title %></h2>
             <p><%= entry.entryBody %></p>
         </div>
-        <% if(user&&entry.owner.toString()=== user._id.toString()){%>
+        <% if(entry.owner.toString()=== user._id.toString()){%>
             <button><a href="/entries/<%entry._id%>/edit"></a>edit</button>
             <form action="/entries/<%entry._id%>/edit?_method=Delete" method="post">
                 <Button>Delete</Button>
