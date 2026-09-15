@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <%- include('../partials/navbar') %>
+
+      <h1>New Journal Entry</h1>
+      <form action="/entries/new" method="POST">
+        <label for="title">Title:</label>
+        <input name="title" id="title" type="text" maxlength="100" />
+
+        <label for="entryBody">Entry:</label>
+        <textarea name="entryBody" id="entryBody" maxlength="350"></textarea>
+
+        <label for="isPublic">Make this entry public:</label>
+        <input name="isPublic" id="isPublic" type="checkbox" />
+
+        <button>Save Entry</button>
+      </form>
+    </body>
+  </body>
+</html>
